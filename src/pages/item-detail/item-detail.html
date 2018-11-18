@@ -1,0 +1,39 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ item.name }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
+  </div>
+
+  <div class="item-detail" padding>
+    <h2>{{item.name}}</h2>
+    <h3>{{item.about}}</h3>
+   <h4>{{item.about1}}</h4>
+   <h5>{{item.def}}</h5>
+   <h6>{{item.caff}}</h6>
+
+<ion-list>
+  <ion-item>
+    <ion-label>Preparation TIme</ion-label>
+    <ion-select [(ngModel)]="prept">
+      <ion-option value="5">5 Minutes</ion-option>
+      <ion-option value="10">10 Minutes</ion-option>
+      <ion-option value="15">15 Minutes</ion-option>
+      <ion-option value="30">30 Minutes</ion-option>
+      <ion-option value="60">1 Hour</ion-option>
+      <ion-option value="120">2 Hours</ion-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+
+<button ion-button (click)="presentConfirm();">Buy</button>
+	
+  </div>
+</ion-content>
